@@ -5,6 +5,7 @@ using namespace std;
 
 struct process {
     int SL,AT,BT,ST,CT,TT,WT,RT;
+    char Name;
 }p[20];
 
 int main() {
@@ -25,6 +26,8 @@ int main() {
     cin>>n;
 
     for(int i = 0; i < n; i++) {
+        cin>>p[i].SL;
+        cin>>p[i].Name;
         cin>>p[i].AT;
         cin>>p[i].BT;
 
@@ -80,12 +83,11 @@ int main() {
     AWT = (float) total_WT / n;
     ART = (float) total_RT / n;
 
-    cout<<endl<<endl;
-
-    cout<<"#P\t"<<"AT\t"<<"BT\t"<<"ST\t"<<"CT\t"<<"TAT\t"<<"WT\t"<<"RT\t"<<"\n"<<endl;
+    cout<<endl;
+    cout<<"SL\t"<<"Name\t"<<"AT\t"<<"BT\t"<<"TAT\t"<<"\n"<<endl;
 
     for(int i = 0; i < n; i++) {
-        cout<<p[i].SL<<"\t"<<p[i].AT<<"\t"<<p[i].BT<<"\t"<<p[i].TT<<"\t"<<"\n"<<endl;
+        cout<<p[i].SL<<"\t"<<p[i].Name<<"\t"<<p[i].AT<<"\t"<<p[i].BT<<"\t"<<p[i].TT<<"\t"<<"\n"<<endl;
     }
     cout<<"ATT = "<<ATT<<endl;
     cout<<"AWT = "<<AWT<<endl;
